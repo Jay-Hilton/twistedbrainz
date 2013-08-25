@@ -1,17 +1,17 @@
-<div class="page-header">
-  <h2>All Statuses</h2>
+<div class="page-header container">
+  <div class="span4">
+    <h1>All Statuses</h1>
+  </div>
 </div>
 <div id="status-btn">
-<%= link_to "New Status", new_status_path, class: "btn btn-success btn-large" %>
+  <%= link_to "New Status", new_status_path, class: "btn btn-warning btn-large" %>
 </div>
 
 <% @statuses.each do |status| %>
 <div class="status">
   <div class="row">
     <div class="span1">
-      <a href="/profiles/show">
-      <%= image_tag status.user.gravatar_url, class: "gravatar" %>
-    </a>
+      <%= link_to image_tag(status.user.gravatar_url), profile_path(status.user), class: 'gravatar' %>
     </div>
     <div class="span7">
       <strong><%= status.user.profile_name %></strong>

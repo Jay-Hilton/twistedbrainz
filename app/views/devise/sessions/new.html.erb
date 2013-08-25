@@ -1,20 +1,18 @@
 
-<div class="row">
-  <div class="span4"> 
-    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: "well"}) do |f| %>
-
+<div>
+  <div> 
+    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: "login"}) do |f| %>
+    <div class="login">
         <fieldset>
           <div class="page-header">
-            <h2>Sign In</h2>
+              <h1>Sign In</h1>
           </div>
           <%= f.input :email %>
           <%= f.input :password %>
 
-        <% if devise_mapping.rememberable? -%>
-          <div><%= f.input :remember_me, as: :boolean %></div>
-        <% end -%>
 
-          <%= f.button :submit, "Sign in", class: "btn-primary" %>
+
+          <%= f.button :submit, "Sign in", class: "btn-warning" %>
           <%= link_to "Cancel", :back, class: "btn" %>
 
         </fieldset> 
@@ -22,7 +20,5 @@
 
     <%= render "devise/shared/links" %>
     </div>
-  <div class="span4">
-    <h3>Signing in is easy and secure</h3>
   </div>
 </div>

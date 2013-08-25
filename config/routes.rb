@@ -1,32 +1,33 @@
 TwistedBrainz::Application.routes.draw do
-  resources :statuses
+
 
   devise_for :users
-
+  # Change the routes
   devise_scope :user do
     get 'register', to: 'devise/registrations#new', as: :register
     get 'login', to: 'devise/sessions#new', as: :login
     get 'edit', to: 'devise/registrations#edit'
-    get 'logout', to: 'devise/sessions#destroy', as: :logout    
-   
+    get 'logout', to: 'devise/sessions#destroy', as: :logout
   end
-  
+
+  resources :statuses
+  get 'feed', to: 'statuses#index', as: :feed
+
   resources :site
     get 'home', to: 'site#index'
     get 'about', to: 'site#about'
     get 'downloads', to: 'site#downloads' 
 
+  # The default site
   root to: 'site#index'
 
-  get "profiles/show"
-
+  # Get The Sites
   get "site/index"
-
   get "site/about"
-
   get "site/downloads"
-
-  get '/:id', to: 'profiles#show'
+  get "profiles/show"
+  
+  get '/:id', to: 'profiles#show', as: 'profile'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -77,7 +78,7 @@ TwistedBrainz::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'site#index'
+  # root :to => 'site#index'
 
   # See how all your routes lay out with "rake routes"
 

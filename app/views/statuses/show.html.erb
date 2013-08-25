@@ -1,15 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header container">
+  <div class="span4">
+    <h1>Show Status</h1>
+  </div>
+</div>
+<div class="span4 show-status">
+  <p>
+    <b>Name:</b>
+    <%= @status.user.full_name %>
+  </p>
 
-<p>
-  <b>Name:</b>
-  <%= @status.user.full_name %>
-</p>
+  <p>
+    <b>Content:</b>
+    <%= @status.content %>
+  </p>
 
-<p>
-  <b>Content:</b>
-  <%= @status.content %>
-</p>
-
-
-<%= link_to 'Edit', edit_status_path(@status) %> |
-<%= link_to 'Back', statuses_path %>
+  <%= link_to 'Edit', edit_status_path(@status) %> |
+  <%= link_to 'Back', statuses_path %>
+</div>

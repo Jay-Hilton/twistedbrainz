@@ -4,6 +4,7 @@
 .status {
   border-bottom: solid 1px #E5E5E5;
   padding: 5px 0;
+  color: #FF8820;
 }
 
 .status p {
@@ -29,4 +30,16 @@
 #status-btn {
   text-align: center;
   padding-bottom: 29px;
+}
+
+#form-btn {
+  padding-bottom: 20px;
+}
+
+.gravatar {
+  padding-left: 15px;
+}
+
+.show-status {
+  padding-bottom: 30px;
 }

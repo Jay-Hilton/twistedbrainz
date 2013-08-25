@@ -8,7 +8,9 @@
 body {
     margin-top: 50px;
     margin-bottom: 50px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Happy Monkey' sans-serif;
+    font-weight: 400;
+    background: #F1F2F2;
     /* background: linear-gradient(45deg, #020031 0%,#27A03B 100%); */
 }
 
@@ -18,12 +20,17 @@ h1 {
 }
 
 h2 {
-  color: #F5C34F;
+  color: #47A6E8;
   font-size: 2.500em;
 }
 
 h3 {
-  color: #14A697;
+  color: #FF8820;
+  font-size: 2.000em;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
@@ -37,6 +44,7 @@ a:hover {
 
 p {
   font-family: 'Armata', sans-serif;
+  color: #888888;
 }
 
 i {

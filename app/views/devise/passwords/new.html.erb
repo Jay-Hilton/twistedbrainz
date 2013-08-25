@@ -1,23 +1,23 @@
 
-<div class="row">
-  <div class="span4">
-    <div class="well">
+<div>
+  <div>
     <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
       <%= devise_error_messages! %>
+    <div class="forgotpassword">
       <fieldset>
         <div class="page-header">
-          <h2>Forgot your password?</h2>
+          <h1>Forgot your password?</h1>
         </div>
 
         <%= f.input :email %><br />
 
-      <%= f.button :submit, "Send me instructions", class: "btn-primary" %>
+      <%= f.button :submit, "Send me instructions", class: "btn-warning" %>
       <%= link_to "Cancel", :back, class: "btn" %>
 
       </fieldset>
     <% end %>
 
-    </div>
     <%= render "devise/shared/links" %>
+    </div>
   </div>
 </div>
