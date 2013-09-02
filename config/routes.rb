@@ -16,7 +16,7 @@ TwistedBrainz::Application.routes.draw do
   resources :site
     get 'home', to: 'site#index'
     get 'about', to: 'site#about'
-    get 'downloads', to: 'site#downloads' 
+    # get 'downloads', to: 'site#downloads'
 
   # The default site
   root to: 'site#index'
@@ -24,7 +24,7 @@ TwistedBrainz::Application.routes.draw do
   # Get The Sites
   get "site/index"
   get "site/about"
-  get "site/downloads"
+  # get "site/downloads"
   get "profiles/show"
   
   get '/:id', to: 'profiles#show', as: 'profile'

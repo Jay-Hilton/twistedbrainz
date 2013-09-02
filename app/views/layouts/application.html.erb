@@ -7,6 +7,7 @@
     <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Happy+Monkey' rel='stylesheet' type='text/css'>
     <title><%= content_for?(:title) ? yield(:title) : "TwistedBrainz" %></title>
     <%= csrf_meta_tags %>
@@ -41,62 +42,92 @@
   <body>
 
     <!-- NavBar -->
-    <div id="navbar" class="navbar-fixed-top">
+    <div id="navbar" class="navbar-static-top">
       <div class="container">
       <!-- Logo & tagline -->
-          <i id="navlink"><%= link_to home_path, class: "brand" do %>
+          <i id="navlinkbrand"><%= link_to home_path, class: "brand" do %>
             TwistedBrainz
           <% end %></i>
-      <!-- Main navigation -->
-          <i class="<%= "active" if @home_active %>" id="navlink"><%= link_to home_path do %>
-            <i class="icon-home"></i>
-          <% end %></i>
-          <i class="<%= "active" if @about_active %>" id="navlink"><%= link_to about_path do %>
-            <i class="icon-book"></i>
-          <% end %></i>
-          <i class="<%= "active" if @downloads_active %>" id="navlink"><%= link_to downloads_path do %>
-            <i class="icon-download"></i>
-          <% end %></i>
-          <i class="<%= "active" if @statuses_active %>" id="navlink"><%= link_to feed_path do %>
-            <i class="icon-group"></i>
-          <% end %></i>
-        <ul class="pull-right">
-          <% if user_signed_in? %>
-            <i class="dropdown">
-              <i class="dropdown-toggle" data-toggle="dropdown" id="navlink"><%= link_to profiles_show_path do %>
-                <%= current_user.full_name %> <i class="icon-chevron-down"></i>
-              </i>
-              <% end %>
-              <ul class="dropdown-menu">
-                <li><%= link_to profiles_show_path do %>
-                  <i class="icon-user"></i> Profile
-                <% end %>
-                </li>
-                <li><%= link_to edit_path do %>
-                  <i class="icon-pencil"></i> Edit
-                <% end %>
-                </li>
+          <!-- <i class="dropdown">
+            Link or button to toggle dropdown
+            <i class="dropdown-toggle" data-toggle="dropdown"><a href="#"><%= image_tag("jacobanimate.png", class: "jacob") %></a></i>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <div style="display: block;">
+              <ul class="filters inline nav">
+                <li>Follow Jacob</li><br>
+                <br><li><a href="http://instagram.com/twiztedhilton" class="instagram"><span>Instagram</span></a></li>
+                <li><a href="http://www.youtube.com/MrTwistedBrainz" class="youtube"><span>Youtube</span></a></li>
               </ul>
-            </i>
-            <i id="navlink"><%= link_to "Log Out", logout_path %></i>
-          <% else %>
-            <i id="navlink"><%= link_to "Register", register_path %></i>
-            <i id="navlink"><%= link_to "Log in", login_path %></i>
-          <% end %>
-        </ul>
+          </div>
+            </ul>
+          </i>
+          <i class="dropdown">
+            Link or button to toggle dropdown
+            <i class="dropdown-toggle" data-toggle="dropdown"><a href="#"><%= image_tag("dennisanimate.png", class: "dennis") %></a></i>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <div style="display: block;">
+              <ul class="filters inline nav">
+                <li>Follow Dennis</li><br>
+                <br><li><a href="http://instagram.com/andimdennis" class="instagram"><span>Instagram</span></a></li>
+                <li><a href="http://www.youtube.com/MrTwistedBrainz" class="youtube"><span>Youtube</span></a></li>
+              </ul>
+            </div>
+            </ul>
+          </i> -->
+      <!-- Main navigation -->
+        <i class="pull-right">
+          <%= link_to home_path do %><i class="<%= "active" if @home_active %>" id="home">
+            <i class="icon-facetime-video"></i>
+          </i><% end %>
+          <%= link_to about_path do %><i class="<%= "active" if @about_active %>" id="navlink">
+            <i class="icon-book"></i>
+          </i><% end %>
+          <!-- <%= link_to do %><i class="<%= "active" if @downloads_active %>" id="navlink">
+            <i class="icon-download"></i>
+          </i><% end %> -->
+          <%= link_to feed_path do %><i class="<%= "active" if @statuses_active %>" id="navlink">
+            <i class="icon-group"></i>
+          </i><% end %>
+        </i>
       </div>
     </div>
     <!-- NavBar End -->
+    <!-- UnderNavBar -->
+    <div id="undernavbar" class="navbar-static-top">
+      <div class="container">
+          <% if user_signed_in? %>
+              <%= link_to do %><i id="navlinkprofile">
+                <%= current_user.full_name %>
+              </i><% end %>
+            <%= link_to logout_path do %><i id="navlinkright">
+              Log Out
+            </i><% end %>
+            <%= link_to profiles_show_path do %><i id="navlinkicon">
+                  <i class="icon-user"></i>
+                </i><% end %>
+                <%= link_to edit_path do %><i id="navlinkicon">
+                  <i class="icon-pencil"></i>
+                </i><% end %>
+          <% else %>
+            <%= link_to register_path do %><i id="navlinkregister">
+              Register
+            </i><% end %>
+            <%= link_to login_path do %><i id="navlinkright">
+              Log In
+            </i><% end %>
+          <% end %>
+      </div>
+    </div>
+    <!-- UnderNavBar End --> 
     <!-- Page Content -->
     <div class="container">
-      <div class="page">
         <% flash.each do |type, message| %>
           <div class="alert <%= flash_class type %>">
             <button class="close" data-dismiss="alert">&times</button>
             <%= message %>
           </div>
         <% end %>
-
+      <div class="page">
 
         <div class="container">
             <%= yield %>
@@ -116,9 +147,6 @@
         </div>
       </footer>
       <!-- NavBar Bottom End -->
-
-    
-
     </div> <!-- /container -->
 
     <!-- Javascripts

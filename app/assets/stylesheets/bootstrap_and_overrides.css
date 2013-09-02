@@ -5,18 +5,21 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+
+/* Default colors are blue=25B0E6 orange=FF8820 red=FF0000 */
+
 body {
-    margin-top: 50px;
+    margin-top: 0px;
     margin-bottom: 50px;
-    font-family: 'Happy Monkey' sans-serif;
+    font-family: 'Lato' sans-serif;
     font-weight: 400;
     background: #F1F2F2;
     /* background: linear-gradient(45deg, #020031 0%,#27A03B 100%); */
 }
 
 h1 {
-    font-size: 3.000em;
-    color: #25B0E6;
+  color: #25B0E6;
+  font-size: 3.000em;
 }
 
 h2 {
@@ -25,7 +28,7 @@ h2 {
 }
 
 h3 {
-  color: #FF8820;
+  color: #FF0000;
   font-size: 2.000em;
 }
 

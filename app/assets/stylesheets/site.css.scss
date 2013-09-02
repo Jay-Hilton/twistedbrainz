@@ -2,6 +2,68 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Under NavBar */
+
+#undernavbar {
+  margin-bottom: 25px;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+#navlinkright {
+  color: rgba(204,204,204,0.8);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #277C9C;
+  padding: 11px 10px;
+}
+
+#navlinkright:hover {
+  background-color: #F1F2F2;
+}
+
+#navlinkregister {
+  color: rgba(204,204,204,0.8);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #277C9C;
+  border-left: 1px solid #277C9C;
+  padding: 11px 10px;
+}
+
+#navlinkregister:hover {
+  background-color: #F1F2F2;
+}
+
+#navlinkprofile {
+  color: rgba(204,204,204,0.8);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #277C9C;
+  border-left: 1px solid #277C9C;
+  padding: 11px 10px;
+}
+
+#navlinkprofile:hover {
+  background-color: #F1F2F2;
+}
+
+#navlinkicon {
+  color: rgba(204,204,204,0.8);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #277C9C;
+  padding: 11px 15px;
+}
+
+#navlinkicon:hover {
+  background-color: #F1F2F2;
+}
+
+/* Under NavBar End */
+
 /* Page Content */
 
 .video {
@@ -20,10 +82,6 @@
   -webkit-transition: all 0.2s ease-in-out;
 }
 
-.founders:hover {
-  border: 15px solid #FF8820;
-}
-
 .page {
   background: white;
   border: 1px solid #E5E5E5;
@@ -35,16 +93,6 @@
 }
 
 /* Page Content End */
-
-/* Downloads */
-
-.download {
-
-}
-
-.download1 {
-
-}
 
 /* Nav Bottom */
 
@@ -81,7 +129,7 @@
 }
 
 #copyright:hover {
-  color: #FF8820;
+  color: #FF0000;
 }
 
 .footer-pic {
@@ -101,28 +149,85 @@
 
 #navbar {
   background: #2D9BC5;
-  padding-top: 5px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 30px;
 }
 
-.navbar .brand:hover {
-  color: #999999;
-}
-
-.navbar .nav .dropdown-toggle .caret {
-  border-top-color: #999999;
-  border-bottom-color: #999999;
+#navbar a:hover {
+  color: white;
 }
 
 #navlink {
+  color: white;
   padding-left: 10px;
   padding-right: 10px;
-  color: #FF8820;
-  text-align: center;
-  font-size: 25px;
+  border-right: 1px solid #277C9C;
+  padding: 24px 20px;
+  margin: 40px 0px;
+}
+
+#home {
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #277C9C;
+  padding: 24px 20px;
+  margin: 40px 0px;
+  border-left: 1px solid #277C9C;
+}
+
+#home:hover {
+  background-color: #1F92BF;
+}
+
+#navlink:hover {
+  background-color: #1F92BF;
+}
+
+#navlinkbrand {
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+#navlinkbrand:hover {
+  font-size: 31px;
+}
+
+#dropdown-link {
+  font-size: 20px;
+  color: black;
 }
 
 .brand {
+  color: white;
   padding-right: 10px;
+}
+
+.jacob {
+  width: 50px;
+  height: 30px;
+}
+
+.dennis {
+  width: 50px;
+  height: 30px;
+}
+
+.instagram {
+  color: black;
+}
+
+.instagram:hover {
+  color: black;
+}
+
+.youtube {
+  color: black;
+}
+
+.youtube:hover {
+  color: black;
 }
 
 /* Navbar End */

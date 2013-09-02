@@ -16,4 +16,9 @@ class SiteControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get video" do
+    get :video
+    assert_response :success
+  end
+
 end
