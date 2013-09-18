@@ -7,7 +7,7 @@ class SiteController < ApplicationController
     @about_active = true
   end
 
-  def downloads
-    @downloads_active = true
+  def video
+    @video_active = true
   end
 end

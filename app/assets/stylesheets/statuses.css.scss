@@ -3,12 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .status {
   border-bottom: solid 1px #E5E5E5;
-  padding: 5px 0;
-  color: #FF8820;
+  padding: 5px 0px;
+  margin-right: 2px;
 }
 
 .status p {
   margin: 4px 0;
+  font-family: Helvetica;
+}
+
+.status strong {
+  font-size: 15px;
 }
 
 .status .admin {
@@ -42,4 +47,35 @@
 
 .show-status {
   padding-bottom: 30px;
+}
+
+.timeago {
+  color: rgba(204,204,204,0.8);
+  -webkit-transition: all 0.2s ease-in-out;
+}
+
+.timeago:hover {
+  color: #FF0000;
+}
+
+.statusedit {
+  color: rgba(204,204,204,0.8);
+  -webkit-transition: all 0.2s ease-in-out;
+}
+
+.statusedit:hover {
+  color: #FF0000;
+}
+
+.statusdelete {
+  color: rgba(204,204,204,0.8);
+  -webkit-transition: all 0.2s ease-in-out;
+}
+
+.statusdelete:hover {
+  color: #25B0E6;
+}
+
+#statuspipe {
+  color: rgba(204,204,204,0.8);
 }

@@ -1,12 +1,17 @@
-<div class="page-header container">
-  <div class="span4">
-    <h1>Home</h1>
+<title>TwistedBrainz - Start</title>
+<div class="jumbotron" style="text-align: center; padding-top: 100px; padding-bottom: 100px; background: #E5E5E5; border: 1px solid #E5E5E5; border-radius: 3px;">
+  <div class="container">
+    <h1 style="font-size: 4.000em; padding-bottom: 10px;">Welcome to TwistedBrainz!</h1>
+    <p style="font-size: 20px;">This is TwistedBrainz official website. </p>
+    <p style="font-size: 20px;">Here you will find stuff about our channel and you will find all our video's in here.</p>
+  <div class="go-btn">
+    <%= link_to "Go to Home Page", home_path, class: "btn btn-primary btn-large" %><br>
   </div>
-</div>
-<div class="video">
-  <iframe width="560" height="315" src="//www.youtube.com/embed/c3inBZoUi2A" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="videoname">
-  <h3>Like A Cow</h3>
-  <p>Our First Video</p>
+    <% if user_signed_in? %>
+    <p style="padding-top: 10px; font-size: 17px;">Welcome <%= current_user.full_name %></p>
+    <% else %>
+    <a href="/register" class="btn btn-success" style="margin-top: 10px;">Register</a>
+    <a href="/login" class="btn btn-success" style="margin-top: 10px;">Log In</a>
+    <% end %>
+  </div>
 </div>

@@ -7,14 +7,15 @@
   */
 
 /* Default colors are blue=25B0E6 orange=FF8820 red=FF0000 */
+/* Default buttons are btn-primary and btn-info */
 
 body {
-    margin-top: 0px;
-    margin-bottom: 50px;
-    font-family: 'Lato' sans-serif;
-    font-weight: 400;
-    background: #F1F2F2;
-    /* background: linear-gradient(45deg, #020031 0%,#27A03B 100%); */
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-family: 'Roboto' sans-serif;
+  font-weight: 400;
+  background: #F1F2F2;
+  /* background: linear-gradient(45deg, #020031 0%,#27A03B 100%); */
 }
 
 h1 {
@@ -23,7 +24,7 @@ h1 {
 }
 
 h2 {
-  color: #47A6E8;
+  color: #FF8820;
   font-size: 2.500em;
 }
 
@@ -37,7 +38,7 @@ ul {
 }
 
 a {
-  color: #6DBCDB;
+  color: #25B0E6;
   text-decoration: none;
 }
 
@@ -46,8 +47,9 @@ a:hover {
 }
 
 p {
-  font-family: 'Armata', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #888888;
+  font-size: 15px;
 }
 
 i {

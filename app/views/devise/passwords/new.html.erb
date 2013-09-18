@@ -1,4 +1,4 @@
-
+<title>TwistedBrainz - Forgot Password</title>
 <div>
   <div>
     <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
@@ -11,8 +11,8 @@
 
         <%= f.input :email %><br />
 
-      <%= f.button :submit, "Send me instructions", class: "btn-warning" %>
-      <%= link_to "Cancel", :back, class: "btn" %>
+      <%= f.button :submit, "Send me instructions", class: "btn-primary" %>
+      <%= link_to "Cancel", :back, class: "btn btn-info" %>
 
       </fieldset>
     <% end %>

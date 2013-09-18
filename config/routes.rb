@@ -14,8 +14,10 @@ TwistedBrainz::Application.routes.draw do
   get 'feed', to: 'statuses#index', as: :feed
 
   resources :site
-    get 'home', to: 'site#index'
+    get 'start', to: 'site#index'
+    get 'home', to: 'site#home'
     get 'about', to: 'site#about'
+    get 'video', to: 'site#video'
     # get 'downloads', to: 'site#downloads'
 
   # The default site
@@ -24,6 +26,7 @@ TwistedBrainz::Application.routes.draw do
   # Get The Sites
   get "site/index"
   get "site/about"
+  get "site/video"
   # get "site/downloads"
   get "profiles/show"
   

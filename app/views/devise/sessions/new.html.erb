@@ -1,4 +1,4 @@
-
+<title>TwistedBrainz - Log In</title>
 <div>
   <div> 
     <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: "login"}) do |f| %>
@@ -10,10 +10,12 @@
           <%= f.input :email %>
           <%= f.input :password %>
 
+          <% if devise_mapping.rememberable? -%>
+            <%= f.input :remember_me, as: :boolean, class: "boolean" %>
+          <% end -%>
 
-
-          <%= f.button :submit, "Sign in", class: "btn-warning" %>
-          <%= link_to "Cancel", :back, class: "btn" %>
+          <%= f.button :submit, "Sign in", class: "btn-primary" %>
+          <%= link_to "Cancel", :back, class: "btn btn-info" %>
 
         </fieldset> 
     <% end %>
