@@ -98,7 +98,7 @@
       <div class="container">
           <% if user_signed_in? %>
               <%= link_to do %><i id="navlinkprofile">
-                <i class="<%= 'red' if current_user.admin? %>"><%= current_user.full_name %></i>
+                <i "<%= "class=\"red\"" if current_user.admin? %>"><%= current_user.full_name %></i>
               </i><% end %>
               <%= link_to logout_path do %><i id="navlinkright">
                 Log Out
