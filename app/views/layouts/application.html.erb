@@ -98,12 +98,12 @@
       <div class="container">
           <% if user_signed_in? %>
               <%= link_to do %><i id="navlinkprofile">
-                <%= current_user.full_name %>
+                <i class="<%= 'red' if current_user.admin? %>"><%= current_user.full_name %></i>
               </i><% end %>
               <%= link_to logout_path do %><i id="navlinkright">
                 Log Out
               </i><% end %>
-              <%= link_to profiles_show_path do %><i id="navlinkicon">
+              <%= link_to profile_path(current_user) do %><i id="navlinkicon">
                   <i class="icon-user"></i>
                 </i><% end %>
                 <%= link_to edit_path do %><i id="navlinkicon">
