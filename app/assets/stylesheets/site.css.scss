@@ -162,16 +162,36 @@
   background-color: #F1F2F2;
 }
 
+#navlinkyoutube {
+  color: rgba(204,204,204,0.8);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #E5E5E5;
+  border-left: 1px solid #E5E5E5;
+  padding: 10px 10px;
+}
+
+#navlinkyoutube:hover {
+  background-color: #F1F2F2;
+}
+
 /* Under NavBar End */
 
 /* Page Content */
 
-.video {
-  
+.videos {
+  color: white;
+  background-color: #25B0E6;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.videos:hover {
+  color: white;
 }
 
 .videoname {
-  
+  padding-bottom: 20px;
 }
 
 .founders {

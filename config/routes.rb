@@ -18,6 +18,7 @@ TwistedBrainz::Application.routes.draw do
     get 'home', to: 'site#home'
     get 'about', to: 'site#about'
     get 'video', to: 'site#video'
+    get 'video/minecraft', to: 'site#minecraft'
     # get 'downloads', to: 'site#downloads'
 
   # The default site
